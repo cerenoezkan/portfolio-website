@@ -226,3 +226,108 @@ section{
 ::-webkit-scrollbar-track{ /*arka plani*/
     background-color: var(--bg-color);
 }
+
+/*services*/
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+.services{
+    background-color: var(--bg-color);
+    color: black;
+}
+.services h2{
+    color: var(--text-color);
+}
+.services-container{
+    display: grid; /*grid ozelligi eklendi*/
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    /*grid sutunlarını=otomatik,her sutunun min300px max 1f olmasını saglar*/
+    justify-items: center;
+    gap: 2.5rem; /*gridler arasi bosluk*/
+}
+.services-box{
+    display: flex; /*hiza*/
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 400px;
+    width: 100%;
+    border-radius: 3rem;
+    cursor: pointer; /*fareyi el isareti yapar*/
+    border: 5px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+.services-box:hover{
+    background: var(--second-bg-color);
+    color: var(--main-color); /*metni*/
+    border: 5px solid var(--main-color);
+    transform: scale(1.03); /* %3 buyutur */
+}
+.services-info{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+.services-info h4{
+    font-size: 4rem;
+    margin: 2rem 0;
+    font-weight: 800;
+}
+.services-info p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+.services-info i { /*ikonların boyutu*/
+    font-size: 8rem;
+}
+
+/*project icin*/
+.projects{
+    background-color: var(--second-bg-color);
+}
+.projects-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    /* grid-template-columns: repeat(3, 1fr); /* Her satırda 3 kart olacak */
+    place-items: center; /*hem yatay hem de dikey ortalama*/
+    gap: 3rem; /*sutun ve satir boslugu 3rem*/
+    row-gap: 5rem; /*sadece satirlar arasi bosluk 5rem*/
+}
+.project-card{
+    display: flex;
+    flex-direction: column; /*iceriklerin ust uste durması*/
+    align-items: center; /*ic ogeleri tam ortalar*/
+    justify-content: center; /*dikeyde ortalar*/
+    text-align: center;
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 3rem;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--main-color); /*golge*/
+    transition: 0.3s ease ;
+}
+.project-card:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+    transform: scale(1.02);            
+}
+.project-card img{
+    max-width: 300px;
+    border-radius: 2em;
+    object-fit: cover; /*gorsel oranını bozmadan sigdirir*/
+}
+.project-card h3{
+    font-size: 3rem;
+}
+.project-card p{
+    font-size: 1.6rem;
+}

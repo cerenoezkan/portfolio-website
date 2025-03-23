@@ -242,22 +242,24 @@ section{
 }
 .services-container{
     display: grid; /*grid ozelligi eklendi*/
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     /*grid sutunlarını=otomatik,her sutunun min300px max 1f olmasını saglar*/
     justify-items: center;
-    gap: 2.5rem; /*gridler arasi bosluk*/
+    gap: 1.5rem; /*gridler arasi bosluk*/
 }
 .services-box{
     display: flex; /*hiza*/
+    flex-direction: column; /* Dikey hizalama */
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
-    height: 400px;
-    width: 100%;
+    height: 350px;
+    width: 90%;
     border-radius: 3rem;
     cursor: pointer; /*fareyi el isareti yapar*/
     border: 5px solid transparent;
     transition: 0.4s ease-in-out;
+    padding: 2rem; /* Kutunun iç boşluğunu azalttık */
 }
 .services-box:hover{
     background: var(--second-bg-color);
@@ -271,20 +273,21 @@ section{
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
+    padding: 2rem;
 }
 .services-info h4{
-    font-size: 4rem;
-    margin: 2rem 0;
-    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-weight: 700;
 }
 .services-info p{
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 1.7;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
 }
 .services-info i { /*ikonların boyutu*/
-    font-size: 8rem;
+    font-size: 5rem;
+    margin-bottom: 1rem;
 }
 
 /*project icin*/
@@ -322,7 +325,7 @@ section{
 }
 .project-card img{
     max-width: 300px;
-    border-radius: 2em;
+    border-radius: 1em;
     object-fit: cover; /*gorsel oranını bozmadan sigdirir*/
 }
 .project-card h3{

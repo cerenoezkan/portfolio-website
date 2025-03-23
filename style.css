@@ -16,3 +16,76 @@
     font-size: 60%;
     overflow-x: hidden;
   }
+  body{
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  .header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%; /*header ic bosluk*/
+    background: rgba(0, 0, 0, 0.3); /*opaklık derecesi*/
+    backdrop-filter: blur(10px); /*bulanıklık efekti*/
+    display: flex; /*esnek yerlesme*/
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /*diger ogelerin üstünde kalması*/
+  }
+  #menu-icon{
+    font-size: 3.5rem;
+    color: var(--main-color);
+    display: none;
+  }
+  .logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer; /*kullaniciya tiklanabilir oldugunu gosterir*/
+    transition: 0.3s ease-in-out; /*gecis efekti veriyor,yavasca*/
+  }
+  .logo:hover{
+    transform: scale(1.1); /*ögeyi 1.1 kat büyütür*/
+  }
+  span{
+    background: linear-gradient( /*renk gecisi efekti*/
+      270deg,
+      #DF8908 10% ,
+      #ff1d15 100%
+    );
+    background-clip: text; /*metin uzerinde gorunmesi*/
+    color: transparent; /*metnin kendi rengini gorunmez yapar,arka plan metnin
+    icinde gorunmesi icin*/
+  }
+  .navbar a{ /*link etiketlerine stil vermek*/
+    font-size: 1.8rem; /*18px*/
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500; /*yazı kalinligi*/
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent; /*seffaf bir alt cizgi*/
+  }
+  .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+  }
+  .gradient-btn{ /*buton*/
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem; /*buton kosesi*/
+    background: linear-gradient( /*renk gecisi efekti*/
+      270deg, /*270 derece gecis*/
+      #DF8908 10% ,
+      #ff1d15 100%
+    );
+    letter-spacing: 1px; /*harfler arasi bosluk*/
+    cursor: pointer; /*imlecin el isaretine donusmesi*/
+    transition: 0.3s ease-in-out; /*yumusak gecis animasyonu*/
+    color: white; /*buton ici yazisi*/
+    border: none; /*buton kenrarligi*/
+    text-wrap: nowrap; /*yaziyi tek satirda tutar*/
+  }
+  .gradient-btn:hover{
+    transform: scale(1.05); /*butonu %5 buyutur*/
+  }
